@@ -1,0 +1,90 @@
+body{margin: 0;}
+ul,i{margin: 0; padding: 0; list-style: none; font-style: normal;}
+img{width: 100%;}
+.red{color: #FF4D4D;}
+.black{color: black;}
+.bg-red{background-color: #ff4d4d;}
+.bg-light{background-color: #f5f5f5;}
+.center{text-align: center;}
+.fl{float: left;}
+.fr{float: right;}
+.none{display: none;}
+.ti2{text-indent: 2em;}
+.fs18{font-size: 18px;}
+.fs12{font-size: 12px;}
+.mb20{margin-bottom: 20px;}
+.ml22{margin-left: 22px;}
+.pt30{padding-top: 30px;}
+.padding16{padding: 16px;}
+.padding16-horizontal{padding: 0 16px;}
+.pt16{padding-top: 16px;}
+.pr16{padding-right: 16px;}
+.pb16{padding-bottom: 16px;}
+.pl16{padding-left: 16px;}
+.w80{width: 80%;}
+.w60{width: 60%;}
+
+.bar{background-color: #FF4D4D;}
+.bar .title, .bar button.btn{color: #fff;}
+.btn-yellow{background-color: #ffd200; border: 1px solid #ffd200; color: #ff005e; font-weight: bold;}
+.btn-red{background-color: #ff5f5f; border:1px solid #ff5f5f; color: #fff;}
+
+.marginBtn{
+    margin-bottom: 50px;
+}
+
+/* index.html */
+#counter-time .banner{position: relative; font-size: 1em;}
+#counter-time .banner img{width: 100%; height: auto; display: block;}
+#counter-time .banner .timecount{position: absolute; top: 31%; width: 100%; line-height: 1.5em; font-weight: bold; color: #fff; text-align: center;}
+#counter-time .banner .timecount .time{padding: 4px 0; padding-right: 10px;}
+#counter-time .banner i{display: inline-block; margin: 0 2px; width: 1.5em; height: 1.5em; background-color: rgba(25,0,56,.5);}
+#counter-time p{margin-bottom: 0; font-size: 14px;}
+#counter-time .btn_wrap{position: absolute; bottom: 5%; width: 100%;}
+#counter-time .btn_wrap a{width: 60%; margin: 0 auto; font-size: 0.9em; border-radius: 50px;}
+#counter-time .btn_wrap a.disabled { background-color: #efefef; border-color: #efefef; color: #666; }
+
+#index{background-color: #eee;}
+#index .instruction{margin: 10px; padding: 24px 16px; background-color: #fff; border-radius: 5px;}
+#index form p{margin-bottom: 2px;}
+#index .read{padding: 16px 0 16px 2em; position: relative; font-size: 12px; color: #333;}
+#index .read input{border: none;}
+#index .read .checkbox{position: absolute; width: 1em; height: 1em; padding-right: 1.02em; padding-bottom: 1.01em; border-radius: 0; border: 1px solid #FF4D4D; left: 0; top: 1em; color: #FF4D4D; text-align: center; font-size: 17px;}
+
+#verify .input-row{position: relative; height: 42px; padding-top: 6px; border: none; background-color: #fff; margin-bottom: 6px; border-radius: 5px;}
+#verify .input-row label{width: 40%; color: #777;}
+#verify .input-row:first-child{height: 36px; margin-bottom: 0; background-color: #f5f5f5;}
+#verify .input-row:first-child label{width: 100%; padding: 0; color: #777;}
+#verify .input-row input{width: 60%; text-align: right;}
+#verify .input-row select{width: 60%; float: right; margin: 4px 0 0; box-shadow:none; border: none; background-color: #fff; color: #777;}
+#verify .input-row .arrow{position: absolute; right: 10px; top: 20px; width: 12px; height: 12px; background: url(../images/7.png) no-repeat; background-size: 100%;}
+#verify input:focus{background-color: #fff;}
+#verify .button{padding-top: 15px;}
+
+#prize-list .banner{background-color: #FF4D4D; font-size: 1.3em;}
+#prize-list .banner img{width: 100%; height: auto; display: block;}
+#prize-list .lotter-count{padding: 10px;position: absolute; left: 0;top:30%; bottom: 50%; right: 0;}
+#prize-list .lotter-count .label{color: #fff; position: absolute; width: 192px; height: 38px; text-align: center; line-height: 40px; z-index: 0}
+#prize-list .btn-yellow {font-weight: normal;}
+#prize-list #main {cursor: pointer; border-radius: 2px;width: 100%;height: 100%;}
+
+#prize-my .container{position: relative;background: url(../images/4_01.jpg) no-repeat;width: 100vw; height: 100vh;background-size: 100% 100%;}
+/*#prize-my .container > img{display: block;}*/
+#prize-my .prizeimg{position: absolute; top: 26%; width: 100%;}
+#prize-my .prizeimg img{width: 80%;}
+#prize-my #prizename{position: absolute; top: 51%; right: 12%; color: #fff; font-size: .9em;}
+#prize-my .footer{margin-top: 20px; color: #777; font-size: 14px; text-align: center;}
+
+/* 审核资格结果 */
+#verified .result{padding-top: 50px;}
+#verified .qualification-result{font-size: 22px; color: #ff4d4d; font-weight: bold; padding-top: 10px;}
+#verified img{width: 25%; margin-top: 30px; margin-bottom: 25px;}
+#verified .button{padding: 16px;}
+#verified .mt30{ position: absolute ; bottom: 15px; text-align: center; width: 100%;}
+
+#hasLottery{background-color: #f3e9dc;}
+#hasLottery .result{position: relative;}
+#hasLottery .propt{color: #ff5f5f; font-size: 1.5em; line-height: 1.5em; font-weight: bold;}
+#hasLottery .result .prizeimg{padding-top: 2em;}
+#hasLottery .result .prizeimg img{width: 80%;}
+#hasLottery .copyright{margin-top: 80px;}

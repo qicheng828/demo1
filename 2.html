@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>抽奖规则</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="http://cdnjscn.b0.upaiyun.com/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+	<script language="javascript" type="text/javascript">
+	  // var ua = navigator.userAgent.toLowerCase();
+	  // if(ua.match(/MicroMessenger/i)!="micromessenger"){
+	  //   window.location.href="http://m.xiaoquyijia.com/lottery/error.html";
+	  // }
+	</script>
+	
+	<script type="text/javascript" src="js/WeixinApi.min.js"></script>
+  </head>
+  <body>
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+     <div id="index" class="content">
+      <form>
+      <div class="instruction">
+        <p class="red">请认真阅读活动规则：</p>
+        <p class="black">1、活动对象：2016年6月30日之前交楼的住宅业主（即不含商铺）</p>
+        <p class="black">2、活动时间：在2016年12月27日19：00前预缴2017年全年物业费且无历史欠费，方可参与“终极抽奖”</p>
+        <p class="black">3、抽奖时间：2016年12月20日20：00至12月30日24：00</p>
+        <p class="black">4、抽奖方式：业主需填写真实的小区名称、房号、姓名和抽奖码。
+</p>
+        <p class="black">5、中奖查询：业主填写真实的小区名称、房号、姓名和抽奖码后，可查询中奖信息及领奖情况。</p>
+        <p class="black">6、领奖需知：业主领奖需携带身份证原件和发票原件、抽奖券并出示微信中奖信息，于12月28日-12月31日间到所属项目物业服务中心兑领奖，逾期未领视为放弃领奖资格.
+</p>
+        <p class="black">7、活动最终解释权归保利物业所有。</p>
+      </div>
+      <div class="padding16-horizontal">
+        <div class="read" id="read-one"><span id="part1" class="icon checkbox"></span>我同意</div>
+        <a class="btn btn-red btn-block disabled marginBtn" id="btn-one" href="javascript:void(0);">确认</a>
+      </div>
+	    <div class="padding16-horizontal">
+        <div class="read" id="read-two" style="display:none"><span id="part2" class="icon icon-check checkbox"></span>我同意</div>
+        <a class="btn btn-red btn-block marginBtn" id="btn-two" style="display:none" href="3.html">确认</a>
+      </div>
+      </form>
+    </div>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	
+<script type="text/javascript">
+$(function(){
+  $("#part1").click(function(){
+    $("#read-one").hide();
+  	$("#btn-one").hide();
+  	$("#read-two").show();
+  	$("#btn-two").show();
+  });
+  $("#part2").click(function(){
+    $("#read-two").hide();
+  	$("#btn-two").hide();
+  	$("#read-one").show();
+  	$("#btn-one").show();
+  });
+});
+</script>
+  </body>
+</html>

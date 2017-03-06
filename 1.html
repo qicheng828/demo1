@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>抽奖首页</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="http://cdnjscn.b0.upaiyun.com/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script language="javascript" type="text/javascript">
+	   /*var ua = navigator.userAgent.toLowerCase();
+	   if(ua.match(/MicroMessenger/i)!="micromessenger"){
+	     window.location.href="error.html";
+	   }*/
+	</script>
+	
+	<script type="text/javascript" src="js/WeixinApi.min.js"></script>
+	
+  </head>
+  <body>
+
+    <div id="counter-time" class="content">
+      <div class="banner">
+        <img src="images/1_01.jpg">
+        <div class="timecount"><span class="time" id="timer"><i>0</i>天<i>0</i>时<i>0</i>分<i>0</i>秒</span></div>
+        <div class="btn_wrap" id="wycj" ><a class="btn btn-default btn-yellow btn-block" id="ckjp"  href="2.html">立即参与</a></div>
+      </div>
+    </div>
+
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+
+	<script language="javascript" type="text/javascript">
+		var interval = 1000;
+		function ShowCountDown(year2, month2, day2, hour2, minute2, second2, divname) {
+			var now = new Date();
+			var endDate = new Date(year2, month2, day2, hour2, minute2, second2);
+			var leftTime = endDate.getTime() - now.getTime();
+			if (leftTime >= 0) {
+
+				/*var leftsecond = parseInt(leftTime / 1000);
+				var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+				var hour = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+				var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60);
+				var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60);
+				var cc = document.getElementById(divname);
+				cc.innerHTML = "<i>"+day1 + "</i>天<i>" + hour + "</i>时<i>" + minute + "</i>分<i>" + second + "</i>秒";*/
+				//  $(".timecount").hide();
+				$("#wycj").show();
+			}else{
+				$("#ckjp").text("活动结束");
+				$("#ckjp").addClass("disabled");
+				$("#ckjp").removeAttr("href");
+				clearInterval(inter);
+				//$("#wycj").attr({"disabled":"disabled"});
+			}
+		}
+		var update = function () {
+			ShowCountDown(2016, 11, 28, 20, 11, 30, 'timer');
+		};
+		var inter = window.setInterval(update, interval);
+		update();
+		//window.setInterval(function(){ShowCountDown(2014,12-1,2,18,1,0,'timer');}, interval);
+
+		$(document).ready(function(){
+			// $("#wycj").hide();
+		});
+	</script>
+
+	<script language="javascript" type="text/javascript">
+		if (window.localStorage["token20141209"] != null && window.localStorage["token20141209"] != '') {
+			//$("#ckjp").show();
+		}
+	</script>
+
+  </body>
+</html>

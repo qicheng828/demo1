@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>我的奖品</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <!-- <link href="http://cdnjscn.b0.upaiyun.com/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script language="javascript" type="text/javascript">
+	  // var ua = navigator.userAgent.toLowerCase();
+	  // if(ua.match(/MicroMessenger/i)!="micromessenger"){
+	  //   window.location.href="http://m.xiaoquyijia.com/lottery/error.html";
+	  //}
+	</script>
+	
+	<script language="javascript" type="text/javascript">
+	  // if(window.localStorage["token20141209"]==null||window.localStorage["token20141209"]==''){
+	  //   window.location.href="http://m.xiaoquyijia.com/lottery/index.html";
+	  // }
+	</script>
+	
+	<script type="text/javascript" src="js/WeixinApi.min.js"></script>	
+  </head>
+  <body>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div id="prize-my" class="content">
+      <div class="container">
+        <!-- <img src="images/7.jpg" alt=""> -->
+        <div class="prizeimg center"><img src="" id="prizeimgurl"></div>
+		    <!-- <p id="prizename">奖品名称</p> -->
+      </div>
+      <!-- <p class="footer">本活动最终解释权归美好物业所有</p> -->
+    </div>
+	
+  <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+  
+    <script type="text/javascript">
+      var owner = JSON.parse(window.localStorage["token20141209"]);
+    //  $("#prizename").text(owner.prizename);
+      $("#prizeimgurl").attr("src", "images/prize/" + owner.prizetype + ".png");
+      //$(".lotteryPro").text("恭喜" + owner.name + "获得" + owner.prizename + "，请阅读下方兑奖要求进行兑奖.");
+      $(".lotteryPro").text("恭喜您获得" + owner.prizename + "，请阅读下方兑奖要求进行兑奖.");
+      WeixinApi.ready(function (Api) {
+        var srcList = [];
+        $.each($('img'), function (i, item) {
+          if (item.src) {
+            srcList.push(item.src);
+            $(item).click(function (e) {
+              // 通过这个API就能直接调起微信客户端的图片播放组件了
+              Api.imagePreview(this.src, srcList);
+            });
+          }
+        });
+      });
+	</script>
+	
+  </body>
+</html>
